@@ -1,0 +1,6 @@
+亚马逊云登陆过程
+进入控制台，通过控制台的cd方式进入到存放liaozhongru.pem的目录下
+
+然后把这段代码拷贝到终端，然后回车即可
+
+ssh -i "liaozhongru.pem" ubuntu@ec2-52-38-232-39.us-west-2.compute.amazonaws.com
