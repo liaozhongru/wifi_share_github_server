@@ -1,0 +1,15 @@
+启动redis过程：
+localhost:~ liaozhongru$ cd /usr/local/etc/
+localhost:etc liaozhongru$ ls
+bash_completion.d	orayremote_config.conf	redis.conf.default
+mongod.conf		redis-sentinel.conf
+openssl			redis.conf
+localhost:etc liaozhongru$ redis-server redis.conf
+
+
+
+亚马逊云ip地址：52.38.232.39
+
+
+如果，我们访问亚马逊云的这个地址来验证Https失败的时候，我们把这个地址放到chrome里面，通过验证就好了。
+https://52.38.232.39:8081/shareWifi/

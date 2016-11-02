@@ -1,0 +1,441 @@
+{
+	"variables": [],
+	"info": {
+		"name": "wifiShareA",
+		"_postman_id": "1afa6df6-d10f-1b98-24f0-07000b15f4ff",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "验证8080端口是否可用",
+			"request": {
+				"url": "http://52.38.232.39:8080/shareWifi/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "检验8081端口是否可用",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "注册登录",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/login",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phoneNumber",
+							"value": "13391912171",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "上传Wifi",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/uploadWifi",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "23249659aaaeeeccc",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912172",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "wifiName",
+							"value": "hello,world",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "wifiPassword",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "比对Wifi",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/compareWifi",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "phoneNumber",
+							"value": "13391910000",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "wifiIDArray",
+							"value": "[11111111,22222222]",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "发送链接时间",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/sendLinkTime",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2003",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "linkTime",
+							"value": "20",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "发送取消链接时间",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/sendUnlinkTime",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "unLinkTime",
+							"value": "25",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "当前wifi在线人数",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/wifiOnlinePeopleCount",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "currentTime",
+							"value": "25",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "改变wifi密码",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/changeWifiPassword",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "oldPassword",
+							"value": "111113",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newPassword",
+							"value": "111113",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "改变wifi名字",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/changeWifiName",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "oldWifiName",
+							"value": "111113",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newWifiName",
+							"value": "111114",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "改变昵称",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/changeNickName",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "oldNickName",
+							"value": "111114",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newNickName",
+							"value": "111115",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "改变性别",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/changeGender",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newGender",
+							"value": "111114",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "改变Email",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/changeEmail",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newEmail",
+							"value": "111114",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "收益",
+			"request": {
+				"url": "https://52.38.232.39:8081/shareWifi/profit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "wifiID",
+							"value": "liaozhongru2004",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "13391912005",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "newEmail",
+							"value": "111114",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
